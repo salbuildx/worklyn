@@ -182,7 +182,7 @@ const SigninCard = () => {
         <Button
           type="button"
           variant="outline"
-          className="h-11 w-full rounded-none bg-muted/60 hover:bg-muted"
+          className="h-11 w-full rounded-none bg-muted/60 hover:bg-muted cursor-pointer "
           disabled={loading}
           onClick={handleGoogleSignIn}
         >
