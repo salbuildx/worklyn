@@ -4,7 +4,7 @@ import { useState } from "react";
 import { authClient } from "@/lib/auth/auth-client";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, Eye, EyeOff, Lock, Mail } from "lucide-react";
+import { ArrowRight, Eye, EyeOff, Lock, Loader2, Mail } from "lucide-react";
 import { FcGoogle } from "react-icons/fc";
 import { Button } from "@/components/ui/button";
 import { useRouter } from "next/navigation";
@@ -167,8 +167,14 @@ const SigninCard = () => {
           className="h-11 w-full rounded-none bg-indigo-600 text-white shadow-sm hover:bg-indigo-700/90"
           disabled={!email.trim() || !password || loading}
         >
-          {loading ? "Logging in..." : "Login"}
-          {!loading && <ArrowRight className="ml-2 h-4 w-4" />}
+          {loading ? (
+            <Loader2 className="h-4 w-4 animate-spin" />
+          ) : (
+            <>
+              Login
+              <ArrowRight className="ml-2 h-4 w-4" />
+            </>
+          )}
         </Button>
 
         <div className="flex items-center gap-3 py-1">
