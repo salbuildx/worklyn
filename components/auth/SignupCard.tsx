@@ -299,6 +299,7 @@ const SignupCard = () => {
         >
           <FcGoogle className="mr-2 h-5 w-5" />
           Sign up with Google
+          
         </Button>
 
         <p className="pt-2 text-center text-xs text-muted-foreground">
